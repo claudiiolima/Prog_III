@@ -1,6 +1,4 @@
 // Classe String para tornar o uso de strings menos problematico
-#include <cstdio>
-#include <cstdlib>
 #include <cstring>
 #include <iostream>
 
@@ -13,7 +11,7 @@ public:
   String() { str[0] = '\0'; }
   String(char ch, int n);
   /*explicit */ String(char s[]) { strcpy(str, s); }
-  String(int i) { itoa(i, str, 10); } // int x; String A = x;
+  // String(int i) { itoa(i, str, 10); } // int x; String A = x;
   int Len() const { return strlen(str); }
   void Print() const { std::cout << str << std::endl; }
   // String GetStr() {
