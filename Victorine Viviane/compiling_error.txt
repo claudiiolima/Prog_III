@@ -1,0 +1,23 @@
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp: In constructor ‘String::String(int)’:
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:16:19: error: ‘itoa’ was not declared in this scope
+   String(int i) { itoa(i, str, 10); }
+                   ^~~~
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:16:19: note: suggested alternative: ‘atol’
+   String(int i) { itoa(i, str, 10); }
+                   ^~~~
+                   atol
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp: In member function ‘String String::GetStr()’:
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:20:5: error: ‘gets’ was not declared in this scope
+     gets(str);
+     ^~~~
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:20:5: note: suggested alternative: ‘fgets’
+     gets(str);
+     ^~~~
+     fgets
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp: In function ‘int main()’:
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:111:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   String s[4] = {"José Carlos", "Denise", "André", "Hélio"};
+                                                              ^
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:111:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:111:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+/home/barbosa/Documentos/2018_1/Prog.III/Prog_III_git/Victorine Viviane/StringClass.cpp:111:62: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
