@@ -1,16 +1,17 @@
+#include <cstring>
 #include <iostream>
-// #include <windows>
+// #include <windows.h>
 
 inline int maximo(int x, int y) { return (x > y) ? x : y; }
 
 inline int minimo(int x, int y) { return (x < y) ? x : y; }
 
 void poscur(int col, int lin) {
-  HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-  if (INVALID_HANDLE_VALUE != hConsole) {
-    COORD pos = {col, lin};
-    SetConsoleCursorPosition(hConsole, pos);
-  }
+  // HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+  // if (INVALID_HANDLE_VALUE != hConsole) {
+  //   COORD pos = {col, lin};
+  //   SetConsoleCursorPosition(hConsole, pos);
+  // }
 }
 
 class Janela {
@@ -20,7 +21,7 @@ protected:
 public:
   Janela() : LinIni(0), ColIni(0), LinFin(23), ColFin(79) {}
   Janela(int li, int ci, int lf, int cf);
-  void Moldura(char modo[] = "\xC9\xBB\xBA\xBC\xCD\xC8");
+  void Moldura(char *modo = "\xC9\xBB\xBA\xBC\xCD\xC8");
 };
 
 Janela::Janela(int li, int ci, int lf, int cf) {
@@ -61,6 +62,9 @@ void Janela::Moldura(char modo[]) {
 }
 
 class JanelaPlus : public Janela {
+public:
+  JanelaPlus() : Janela() {}
+  JanelaPlus(int li, int ci, int lf, int cf) : Janela(li, ci, lf, cf) {}
   void cls();
   void cursor(int lin, int col);
   void centra(int lin, char s[]);
@@ -80,5 +84,24 @@ void JanelaPlus::cls() {
 void JanelaPlus::cursor(int lin, int col) {
   if (lin >= LinFin || col >= ColFin)
     lin = col = 0;
-  poscur(ColIni + 1; LinIni + 1);
+  poscur(ColIni + col + 1, LinIni + lin + 1);
+}
+
+void JanelaPlus::centra(int lin, char *s) {
+  int tam = strlen(s);
+  if (tam > ColFin - ColIni - 1)
+    return;
+  cursor((ColFin - ColIni - tam) / 2, lin);
+  std::cout << s;
+}
+
+int main(void) {
+  JanelaPlus tela;
+  tela.Moldura();
+  tela.cls();
+  tela.centra(5, "Centraliza o texto na Moldura");
+
+  poscur(0, 23);
+
+  return 0;
 }
