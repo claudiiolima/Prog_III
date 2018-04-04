@@ -80,11 +80,9 @@ public:
 
 Tipo::Tipo() { TipoImovel[0] = '\0'; }
 
-void
+// void Tipo::Get()
 
-    class Venda : private Cadastro,
-                  Imovel,
-                  Tipo {
+class Venda : private Cadastro, Imovel, Tipo {
 private:
   float valor;
 
