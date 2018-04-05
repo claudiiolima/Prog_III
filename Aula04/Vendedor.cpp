@@ -1,4 +1,4 @@
-#include "vendedor.h"
+#include "vendedor.hpp"
 
 using namespace std;
 

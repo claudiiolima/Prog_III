@@ -1,5 +1,5 @@
-#include "hora.h"
-#include "vendedor.h"
+#include "hora.hpp"
+#include "vendedor.hpp"
 
 using namespace std;
 

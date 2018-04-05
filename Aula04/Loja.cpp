@@ -1,4 +1,4 @@
-#include "loja.h"
+#include "loja.hpp"
 
 using namespace std;
 
