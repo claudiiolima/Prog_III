@@ -103,3 +103,45 @@ public:
   void Get();
   void Print();
 };
+
+void Aluguel::Get() {
+  cout << "\n ...Proprietario: ";
+  Proprietario.Get();
+  cout << "\n ...Inquilino: ";
+  Cadastro::Get();
+  cout << "\n ...Imovel: ";
+  Imovel::Get();
+  cout << "\tAluguel: ";
+  cin >> AluguelMensal;
+  cout << "\tPrazo do contrato: ";
+  cin >> Prazo;
+  cin.ignore(10, '\n');
+}
+
+void Aluguel::Print() {
+  cout << "\n ...Proprietario: ";
+  Proprietario.Print();
+  cout << "\n ...Inquilino: ";
+  Cadastro::Print();
+  cout << "\n ...Imovel: ";
+  Imovel::Print();
+  Tipo::Print();
+  cout << "\tAluguel: " << AluguelMensal << endl;
+  cout << "\tPrazo do contrato: " << Prazo << endl;
+}
+
+int main() {
+  Venda V;
+  Aluguel A;
+
+  cout << "\n* Digite os dados do imovel: Venda. " << endl;
+  V.Get();
+  cout << "\n* Digite os dados do imovel: Aluguel. " << endl;
+  A.Get();
+  cout << "\n\n* IMOVEL PARA VENDA: " << endl;
+  V.Print();
+  cout << "\n\n* IMOVEL PARA ALUGUEL: " << endl;
+  A.Print();
+
+  return 0;
+}

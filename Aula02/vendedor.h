@@ -10,8 +10,8 @@ protected:
 public:
   Vendedor();                        // Construtor default
   Vendedor(double sal, string name); // Construtor inicializador
-  void GetNome(string nov_nome);     // Altera valor de _nome
-  void GetSalario(double nov_sal);   // Altera valor de _salario
+  void SetNome(string nov_nome);     // Altera valor de _nome
+  void SetSalario(double nov_sal);   // Altera valor de _salario
   string Nome();                     // Retorna string de _nome
   double Salario();                  // Retorna valor de _salario
 };

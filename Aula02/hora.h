@@ -10,7 +10,7 @@ protected:
 
 public:
   Horario(); // Construtor default
-  void GetHorario(unsigned int nov_hor,
+  void SetHorario(unsigned int nov_hor,
                   unsigned int nov_min); // Altera valor de _hora e _minuto
   string Horas();                        // Retorna string com o horario
 };

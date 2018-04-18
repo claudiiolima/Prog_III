@@ -1,4 +1,4 @@
-#include "loja.hpp"
+#include "loja.h"
 #include <iomanip>
 
 using namespace std;
@@ -10,19 +10,19 @@ int main() {
   int h, m, i;
   cout << "\n\tNome do vendedor: ";
   cin >> n;
-  l.GetNomeV(n);
+  l.SetNomeV(n);
   cout << "\tSalario do " << l.NomeV() << ": ";
   cin >> s;
-  l.GetSalarioV(s);
+  l.SetSalarioV(s);
   cout << "\tHorario de abertura :";
   cin >> h >> m;
-  l.GetH_abre(h, m);
+  l.SetH_abre(h, m);
   cout << "\tHorario de fechamento: ";
   cin >> h >> m;
-  l.GetH_fecha(h, m);
+  l.SetH_fecha(h, m);
   cout << "\tNumero de itens: ";
   cin >> i;
-  l.GetItens(i);
+  l.SetItens(i);
   cout << "\n\t=============================\n" << endl;
   cout << "\tVendedor: " << l.NomeV() << endl
        << "\tSalario: R$ " << l.SalarioV() << endl

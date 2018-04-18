@@ -1,11 +1,11 @@
-#include "hora.hpp"
+#include "hora.h"
 #include <iomanip>
 
 using namespace std;
 
 Horario::Horario() : _hora(0), _minuto(0) {}
 
-void Horario::GetHorario(unsigned int nov_hor, unsigned int nov_min) {
+void Horario::SetHorario(unsigned int nov_hor, unsigned int nov_min) {
   _hora = nov_hor;
   _minuto = nov_min;
 }
