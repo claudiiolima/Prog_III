@@ -31,7 +31,8 @@ String::String(char ch, int n) {
     str[i] = ch;
   str[i] = '\0';
 }
-
+// String S, S1;
+// S += S1
 String String::operator+=(String &s) {
   if (this->Len() + s.Len() < MAX)
     strcat(str, s.str);

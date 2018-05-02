@@ -14,12 +14,25 @@ Data::Data(unsigned int d, unsigned int m, unsigned int a) : Data() {
 Data::Data(const Data &obj) {
   dia(obj._dia);
   mes(obj._mes);
-  ano(obj._ano + 1);
+  ano(obj._ano + 200);
 }
 
-Data Data::operator=(const Data &obj) {
-  return Data(obj.dia(), obj.mes(), obj.ano());
+Data &Data::operator=(const Data &obj) {
+  this->_dia = obj._dia;
+  this->_mes = obj._mes;
+  this->_ano = obj._ano;
+  return *this;
 }
+
+Data Data::operator+(const Data &obj) {
+  Data tmp;
+  tmp._dia = this->_dia + obj._dia;
+  tmp._mes = this->_mes + obj._mes;
+  tmp._ano = this->_ano + obj._ano;
+  return tmp;
+}
+
+Data::~Data() { cout << "\nDestructor Data " << texto() << endl; }
 
 void Data::dia(unsigned int d) {
   if (d >= 1 && d <= 31)

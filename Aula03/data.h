@@ -11,9 +11,11 @@ private:
 
 public:
   Data();
-  Data(unsigned int d, unsigned int m, unsigned int a);
+  Data(unsigned int d, unsigned int m = 2, unsigned int a = 2000);
   Data(const Data &obj);
-  Data operator=(const Data &obj);
+  Data &operator=(const Data &obj);
+  Data operator+(const Data &obj);
+  ~Data();
   void dia(unsigned int);
   void mes(unsigned int);
   void ano(unsigned int);
