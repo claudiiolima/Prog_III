@@ -1,0 +1,24 @@
+Qual eh a diferença entre declaraçao de classe e uma declaraçao de um objeto (tambem
+conhecido como instanciaçao)?
+-> Declarar uma classe eh definir seus atributos e metodos, instanciar um objeto,
+		eh declarar uma variavel do tipo de classe.
+
+O que eh uma variavel de instancia?
+-> Basicamente sao os atributos de uma classe, podem ser diferentes para diferentes objetos de uma mesma classe
+
+Quais sao os aspectos basicos de uma classe?
+-> Sao atributos, definidos normalmente na instancia privada, e metodos (funcoes de uma classe), geralmente publicas.
+
+
+O que significa o termo public? E o termo private?
+-> public: Objetos da classe podem acessar as informacoes desta instancia de modo direto.
+-> private: A instancia soh pode ser acessada dentro da definicao da propria classe, os objetos usam metodos publicos para
+						 acessar essas informacoes.
+
+O que eh um construtor?
+-> Eh um metodo de inicializaçao, chamado no momento da declaraçao do objeto, nao podendo ser chamado posteriormente.
+
+O que eh um metodo “accessor”? Qual eh a vantagem em utilizar esse metodo ao inves de
+prover acesso direto ao atributo?
+-> Eh o metodo responsavel em retornar as informacoes privadas da classe. Varios sao os motivos para isso, o encapsulamento
+		eh responsavel principalmente por manter a integridade do objeto.
